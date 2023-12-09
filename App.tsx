@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import * as Location from 'expo-location';
+import { Svga } from "./Svga"
 
 
 
@@ -32,8 +33,9 @@ export default function App() {
   return (
     <SafeAreaView style={styles.container}>
       <View>
-        <Text>Open up App.js to start working on your app!</Text>
-        <Text>asdf</Text>
+        {compassHeading && <Text>heading is: {compassHeading.trueHeading}</Text>}
+        {compassHeading && <Svga rotation={360 - compassHeading.trueHeading} />}
+
         <StatusBar style="auto" />
       </View>
     </SafeAreaView>
