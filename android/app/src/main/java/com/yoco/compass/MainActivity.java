@@ -1,4 +1,4 @@
-package com.compass;
+package com.yoco.compass;
 
 import android.os.Build;
 import android.os.Bundle;

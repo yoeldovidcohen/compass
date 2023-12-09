@@ -1,4 +1,4 @@
-package com.compass;
+package com.yoco.compass;
 
 import android.app.Application;
 import android.content.res.Configuration;
