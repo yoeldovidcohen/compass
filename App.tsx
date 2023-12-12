@@ -7,10 +7,10 @@ import * as SystemUI from "expo-system-ui";
 import { Svga } from "./Svga";
 
 export default function App() {
-  const colorScheme = useColorScheme();
-  
-  const themeContainerStyle =
-  colorScheme === 'light' ? styles.lightContainer : styles.darkContainer;
+  // const colorScheme = useColorScheme();
+
+  // const themeContainerStyle =
+  // colorScheme === 'light' ? styles.lightContainer : styles.darkContainer;
 
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [compassHeading, setComppassHeading] = useState(0);
@@ -36,9 +36,10 @@ export default function App() {
   }, []);
 
   return (
-    <SafeAreaView style={{ flex: 1 }}>
+    <SafeAreaView>
       <View
-        style={[styles.container, themeContainerStyle]}
+        // style={[styles.container, themeContainerStyle]}
+        className="bg-purple-500 dark:bg-blue-400"
       >
         <Svga rotation={360 - compassHeading} style={{ margin: "auto" }} />
 
