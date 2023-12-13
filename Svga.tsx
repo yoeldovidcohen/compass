@@ -20,7 +20,7 @@ export const Svga = function Svga(props: SvgaProps) {
 
   return (
     
-    <View style={$styles}>
+    <View >
       {/* <Text style={$text}>Hello</Text> */}
       <Svg
         xmlns="http://www.w3.org/2000/svg"
