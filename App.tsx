@@ -1,14 +1,18 @@
 import { StatusBar } from "expo-status-bar";
 import React, { useEffect, useState } from "react";
-import { StyleSheet, Text, View } from "react-native";
+import { StyleSheet, Text, View, useColorScheme } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import * as Location from "expo-location";
 import { Svga } from "./Svga";
+
+
 
 export default function App() {
   const [errorMsg, setErrorMsg] = useState<string | null>(null);
   const [compassHeading, setComppassHeading] = useState(0);
   // useState<Location.LocationHeadingObject | null>(null);
+
+  const color = useColorScheme()
 
   useEffect(() => {
     (async () => {
@@ -31,6 +35,7 @@ export default function App() {
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
+      <Text style={{margin: 10}}>{color}</Text>
       <View
         style={{
           flex: 1,

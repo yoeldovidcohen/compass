@@ -3,6 +3,7 @@
     "name": "compass",
     "slug": "compass",
     "version": "1.0.0",
+    "userInterfaceStyle": "automatic",
     "assetBundlePatterns": [
       "**/*"
     ],
@@ -20,10 +21,12 @@
         "android.permission.ACCESS_FINE_LOCATION",
         "android.permission.FOREGROUND_SERVICE"
       ],
-      "package": "com.yoco.compass"
+      "package": "com.yoco.compass",
+      "userInterfaceStyle": "automatic"
     },
     "ios": {
-      "bundleIdentifier": "com.yoco.compass"
+      "bundleIdentifier": "com.yoco.compass",
+      "userInterfaceStyle": "automatic"
     }
   }
 }
