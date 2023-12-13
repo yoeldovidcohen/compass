@@ -25,13 +25,11 @@
         "android.permission.ACCESS_FINE_LOCATION",
         "android.permission.FOREGROUND_SERVICE"
       ],
-      "package": "com.yoco.compass",
-      "userInterfaceStyle": "automatic"
+      "package": "com.yoco.compass"
 
     },
     "ios": {
-      "bundleIdentifier": "com.yoco.compass",
-      "userInterfaceStyle": "automatic"
+      "bundleIdentifier": "com.yoco.compass"
 
     }
   }

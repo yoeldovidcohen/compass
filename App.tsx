@@ -47,14 +47,16 @@ export default function App() {
 
   }, []);
   // NativeWindStyleSheet.setColorScheme
+  const colorScheme = useColorScheme();
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
       <View
         // style={[styles.container, themeContainerStyle]}
-        className="bg-purple-400 dark:bg-blue-400 h-full"
+        // className="bg-purple-400 dark:bg-blue-400 h-full flex items-center align-middle"
       >
-        <Svga rotation={360 - compassHeading} />
+        <Text className="m-10">{colorScheme}</Text>
+        {/* <Svga rotation={360 - compassHeading} /> */}
 
         {/* {compassHeading && <Text>{compassHeading.trueHeading}</Text>} */}
         {/* </View> */}
