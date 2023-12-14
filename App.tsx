@@ -12,7 +12,7 @@ export default function App() {
   const [compassHeading, setComppassHeading] = useState(0);
   // useState<Location.LocationHeadingObject | null>(null);
 
-  const color = useColorScheme()
+  const colorScheme = useColorScheme()
 
   useEffect(() => {
     (async () => {
@@ -35,7 +35,7 @@ export default function App() {
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
-      <Text style={{margin: 10}}>{color}</Text>
+      {/* <Text style={{margin: 10}}>{color}</Text> */}
       <View
         style={{
           flex: 1,
@@ -44,7 +44,7 @@ export default function App() {
           justifyContent: "center",
           width: "100%",
           height:"100%",
-          // backgroundColor: "grey",
+          backgroundColor: colorScheme==="light" ? "white" : "black",
         }}
       >
         <Svga rotation={360 - compassHeading} style={{ margin: "auto" }} />
@@ -61,11 +61,3 @@ export default function App() {
 //     flex: 1,
 // });
 
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: "#fff",
-    alignItems: "center",
-    justifyContent: "center",
-  },
-});
