@@ -20,7 +20,7 @@ export default function App() {
   const colorScheme = useColorScheme();
 
   useEffect(() => {
-    async () => {
+    (async () => {
       const { status } = await Location.requestForegroundPermissionsAsync();
       if (status !== "granted") {
         setErrorMsg("Permission to access location was denied");
@@ -35,7 +35,7 @@ export default function App() {
         setComppassHeading(Math.round(cc.trueHeading))
       );
       // setCompp(compl)
-    };
+    })();
     // Appearance.addChangeListener((chng)=>NativeWindStyleSheet.setColorScheme("system"))
   }, []);
   // NativeWindStyleSheet.setColorScheme
