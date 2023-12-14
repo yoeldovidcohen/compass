@@ -7,8 +7,6 @@ import { Svga } from "./Svga";
 
 // const StyledView = styled(View)
 
-
-
 export default function App() {
   // const colorScheme = useColorScheme();
 
@@ -19,7 +17,7 @@ export default function App() {
   const [compassHeading, setComppassHeading] = useState(0);
   // useState<Location.LocationHeadingObject | null>(null);
 
-  const colorScheme = useColorScheme()
+  const colorScheme = useColorScheme();
 
   useEffect(() => {
     async () => {
@@ -39,7 +37,6 @@ export default function App() {
       // setCompp(compl)
     };
     // Appearance.addChangeListener((chng)=>NativeWindStyleSheet.setColorScheme("system"))
-
   }, []);
   // NativeWindStyleSheet.setColorScheme
 
@@ -53,8 +50,8 @@ export default function App() {
           // alignItems: "center",
           justifyContent: "center",
           width: "100%",
-          height:"100%",
-          backgroundColor: colorScheme==="light" ? "white" : "black",
+          height: "100%",
+          backgroundColor: colorScheme === "light" ? "white" : "black",
         }}
       >
         {/* <Text className="m-10">{colorScheme}</Text> */}
@@ -62,7 +59,9 @@ export default function App() {
 
         {/* {compassHeading && <Text>{compassHeading.trueHeading}</Text>} */}
         {/* </View> */}
-        <StatusBar translucent/>
+        <StatusBar
+          backgroundColor={colorScheme === "light" ? "white" : "black"}
+        />
       </View>
     </SafeAreaView>
   );
@@ -71,4 +70,3 @@ export default function App() {
 // const SafeStyle = StyleSheet.create({
 //     flex: 1,
 // });
-
