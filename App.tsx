@@ -3,10 +3,7 @@ import React, { useEffect, useState } from "react";
 import { StyleSheet, Text, View, useColorScheme } from "react-native";
 import { SafeAreaView } from "react-native-safe-area-context";
 import * as Location from "expo-location";
-// import * as SystemUI from "expo-system-ui";
 import { Svga } from "./Svga";
-import { NativeWindStyleSheet } from "nativewind";
-// import { styled, useColorScheme ,withExpoSnack} from "nativewind";
 
 // const StyledView = styled(View)
 
@@ -45,7 +42,6 @@ export default function App() {
 
   }, []);
   // NativeWindStyleSheet.setColorScheme
-  const colorScheme = useColorScheme();
 
   return (
     <SafeAreaView style={{ flex: 1 }}>
@@ -61,12 +57,12 @@ export default function App() {
           backgroundColor: colorScheme==="light" ? "white" : "black",
         }}
       >
-        <Text className="m-10">{colorScheme}</Text>
-        {/* <Svga rotation={360 - compassHeading} /> */}
+        {/* <Text className="m-10">{colorScheme}</Text> */}
+        <Svga rotation={360 - compassHeading} />
 
         {/* {compassHeading && <Text>{compassHeading.trueHeading}</Text>} */}
         {/* </View> */}
-        <StatusBar style="auto" />
+        <StatusBar translucent/>
       </View>
     </SafeAreaView>
   );
