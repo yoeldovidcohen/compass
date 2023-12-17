@@ -22,7 +22,7 @@
         "android.permission.ACCESS_FINE_LOCATION",
         "android.permission.FOREGROUND_SERVICE"
       ],
-      "package": "com.yoco.compass",
+      "package": "com.yadco.compass",
       "userInterfaceStyle": "automatic"
     },
     "ios": {
