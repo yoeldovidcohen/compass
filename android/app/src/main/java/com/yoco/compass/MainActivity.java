@@ -62,12 +62,4 @@ public class MainActivity extends ReactActivity {
     // because it's doing more than {@link Activity#moveTaskToBack} in fact.
     super.invokeDefaultOnBackPressed();
   }
-
-  // @Override
-  // public void onConfigurationChanged(Configuration newConfig) {
-  //   super.onConfigurationChanged(newConfig);
-  //   Intent intent = new Intent("onConfigurationChanged");
-  //   intent.putExtra("newConfig", newConfig);
-  //   sendBroadcast(intent);
-  // }
 }

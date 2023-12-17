@@ -4,6 +4,7 @@
     "slug": "compass",
     "version": "1.0.0",
     "userInterfaceStyle": "automatic",
+    "icon": "./assets/icon.png",
     "assetBundlePatterns": [
       "**/*"
     ],
